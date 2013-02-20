@@ -387,7 +387,7 @@
 }
 
 + (TBXMLElement*) childElementNamed:(NSString*)aName parentElement:(TBXMLElement*)aParentXMLElement{
-    
+  if (!aParentXMLElement) return nil;    
 	TBXMLElement * xmlElement = aParentXMLElement->firstChild;
 	const char * name = [aName cStringUsingEncoding:NSUTF8StringEncoding];
 	while (xmlElement) {
